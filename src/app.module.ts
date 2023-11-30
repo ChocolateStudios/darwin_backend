@@ -1,10 +1,20 @@
+import { ConnectionsModule } from './connections/connections.module';
+import { FoldersModule } from './folders/folders.module';
+import { ProcessesModule } from './processes/processes.module';
+import { ProfilesModule } from './profiles/profiles.module';
+import { TasksModule } from './tasks/tasks.module';
+import { UsersModule } from './users/users.module';
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConnectionsModule,
+    FoldersModule,
+    ProcessesModule,
+    ProfilesModule,
+    TasksModule,
+    UsersModule,],
+  controllers: [],
+  providers: [],
 })
-export class AppModule {}
+export class AppModule { }
